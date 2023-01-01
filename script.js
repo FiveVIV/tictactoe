@@ -115,6 +115,10 @@ class TicTacToe {
       }
     }
   }
+  
+  gameEnd() {
+    
+  }
 }
 
 const size = 3;
@@ -125,3 +129,6 @@ TTT.addEvents();
 function refreshPage(){
   window.location.reload();
 } 
+
+
+
