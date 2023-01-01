@@ -27,10 +27,12 @@ class TicTacToe {
         if (btnsArr[i].innerHTML == "") {
           if (xOfO % 2 == 0) {
             btnsArr[i].innerHTML = "X";
+            document.getElementById("instruction").innerHTML = "O's turn"
             xOfO++;
           } else {
             btnsArr[i].innerHTML = "O";
             xOfO++;
+            document.getElementById("instruction").innerHTML = "X's turn"
           }
         } else {
         }
@@ -53,7 +55,7 @@ class TicTacToe {
     for (let i = 0; i < this.row; i++) {
       let tempPush = [];
       for (let b = 0; b < this.col; b++) {
-        tempPush.push(i, b);
+        tempPush.push(b, i);
       }
       possibleCombinations.push(tempPush);
     }
@@ -100,12 +102,12 @@ class TicTacToe {
         if (content == "X") {
           x++;
           if (x == this.row) {
-            console.log("X WINT")
+            document.getElementById("instruction").innerHTML = "X Wins"
           }
         } else if (content == "O") {
           o++;
           if (o == this.row) {
-            console.log("O WINT")
+            document.getElementById("instruction").innerHTML = "O Wins"
           }
 
         }
@@ -119,3 +121,7 @@ const size = 3;
 
 let TTT = new TicTacToe(size, size);
 TTT.addEvents();
+
+function refreshPage(){
+  window.location.reload();
+} 

@@ -1,4 +1,4 @@
-button {
+#knop {
     width: 10rem;
     height: 10rem;
     transition: .8s;
@@ -9,14 +9,10 @@ button {
     color: #67AF92;
 }
 
-button:hover {
+#knop:hover {
     transform: scale(110%);
     position: relative;
     cursor: pointer;
-}
-
-button:active {
-    transform: scale(90%);
 }
 
 .aap {
@@ -25,6 +21,7 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 *, body {
